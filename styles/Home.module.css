@@ -1,0 +1,450 @@
+/* Sidebar Navigation */
+.navcontainer{
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 3px 0px 6px 0px rgba(246,246,246,0.75);
+}
+
+/* Sidebar Navigation */
+.wrapper{
+  padding: 10px;
+  z-index: 1;
+}
+
+.wrapper>ul,
+.signout>ul{
+  gap: 5px;
+}
+
+.wrapper>ul>li>a:not(.logout>li>a){
+  opacity: 0;
+}
+
+.wrapper>ul>li:hover{
+  color: #874aff;
+}
+
+/* Sidebar Logo */
+.logo{
+  padding: 10px 10px 10px 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo>h2{
+  opacity: 0;
+}
+.logo{
+  background: url('../public/logo.png');
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px auto;
+  position: absolute;
+  top: 10px;
+  left: 25%;
+}
+
+/* Sidebar List */
+.wrapper>ul{
+  margin-top: 20px;
+  text-align: center;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  list-style: none;
+}
+
+/* Sidebar List Item */
+.wrapper>ul>li,
+.logout>ul>li{
+  list-style: none;
+  font-size: 20px;
+  text-decoration: none;
+  opacity: .6;
+}
+
+/* Sidebar List Item:hover */
+.wrapper>ul>li:hover,
+.logout>ul>li:hover{
+  color: #874aff;
+  text-shadow: 1px 1px 7px #030303;
+  transition: all .2s ease-in-out;
+}
+
+/* Sidebar List Item Signout */
+.logout{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 20px;
+}
+
+/* Sidebar List Item Signout */
+.logout>ul>li{
+  border: 1px solid #777;
+  border-radius: 50%;
+  width: 65%;
+  margin: auto;
+  width: 50px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Top Navigation */
+
+.headcontainer{
+  display: flex;
+  flex-wrap: wrap;
+  height: 70px;
+  color: #aaa;
+  margin-left:200px;
+}
+
+.headcontainer{
+   width: 100%;
+    margin-left: 0px;
+    padding-left: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+/* Top Navigation Wrapper */
+
+.headwrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+}
+
+.headwrapper span{
+  font-weight: 500;
+  color: #030303;
+}
+
+/* Top Navigation: Searchbar */
+.searchbar input{
+    border: none;
+    background-color: #f5f5f5;
+    padding-left: .5rem;
+}
+
+/* Top Navigation: Searchbar */
+.searchbar input:focus{
+    border: none;
+    color: #ccc;
+}
+/* Top Navigation: Searchbar placeholder */
+.searchbar ::-webkit-input-placeholder{
+    color: #888;
+}
+
+
+/* Top Navigation: Menu Button */
+.headerbtn{
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0px #ccc;
+  border-radius: 3px;
+  padding: 5px 20px;
+  transition: all .3s ease-in-out;
+}
+.headerbtn:hover{
+  box-shadow: 0 0px 0px 0px #ccc;
+}
+
+
+/* Top Navigation: Profile Icon */
+.profile{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  right: 20px;
+  margin-top: 15px;
+}
+
+/* Top Navigation: Profile Spacing Reset */
+.profile>span>span:empty{
+  display: none !important;
+}
+
+/* Top Navigation: Profile Icon */
+.image{
+  position: relative !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+
+/* Main Content */
+
+.contentContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-inline: auto;
+    padding-top: 4rem;
+}
+
+.contentwrapper{
+  display: flex;
+  padding: 20px 0px;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.contentHeader{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contentHeader h2,
+.contentHeader p{
+  margin: 0;
+}
+
+.contentHeader h2{
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.contentHeader p{
+  font-size: 12px;
+  color: #aaa;
+}
+
+
+
+/* Main Content Tabs/Cards */
+
+.tabs{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0rem 2rem 2rem;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 3px 0px 6px 0px rgb(246,246,246,0.75);
+  transition: all .3s ease-in-out;
+}
+.tabs:hover{
+  box-shadow: 0 1px 1px 0px #ccc;
+}
+
+.tabs .legend{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 40px;
+  top: 40%;
+  list-style-type: none;
+}
+
+.legend li:first-child{
+  color: #874aff;
+}
+.legend li:last-child{
+  color: #2ad7f3;
+}
+.splitabs{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+.splitabs span>span:empty{
+  display: none !important;
+}
+
+.splitabs .categories{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 2rem 0rem;
+  gap: 2rem;
+}
+
+.splitabs h4{
+  font-size: 30px;
+  margin: 0;
+}
+
+.splitabs span{
+  color: #888;
+  font-size: 13px;
+}
+
+
+.splitabs .categories .image{
+  position: relative !important;
+  width: 65px !important;
+  height: 60px !important;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+
+/* Secondary Button */
+
+.secondarybtn{
+  background-color: #874aff;
+  color: #ffffff;
+  box-shadow: 0 1px 1px 0px #ccc;
+  border-radius: 3px;
+  padding: 5px 20px;
+  transition: all .3s ease-in-out;
+}
+.secondarybtn:hover{
+  box-shadow: 0 0px 0px 0px #ccc;
+}
+
+
+
+/* Charts JS Styling */
+
+.charts {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 68% 30%;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1.2rem;
+}
+
+.charts .bar{
+  width: 100%;
+  position: relative;
+  background-color: #ffffff;
+  padding: 1rem 2rem 2rem;
+  border-radius: 5px;
+  margin-left: 0px;
+  cursor: pointer;
+  box-shadow: 3px 0px 6px 0px rgb(246 246 246 / 75%);
+  transition: all .3s ease-in-out;
+}
+
+.charts .bar .legend{
+  display: flex;
+  position: absolute;
+  top: 5%;
+  left: 45%;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+.charts .bar span {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.charts .bar h1{
+  margin: 0;
+}
+
+.bar:hover {
+  box-shadow: 0 0px 0px 0px #ccc;
+}
+
+.charts .mastfooter{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 1rem 2rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 3px 0px 6px 0px rgb(246 246 246 / 75%);
+  transition: all .3s ease-in-out;
+}
+
+.mastfooter{
+  margin-left: 0px;  
+}
+
+@media only screen and (max-width:960px){
+
+  .headwrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .headcontainer{
+    padding-left: 15px;
+  }
+
+  .contentContainer{
+    margin-left: 70px;
+  }
+  .contentContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0px;
+    padding: 0rem 4rem 4rem 8rem;
+  }
+
+  .contentwrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .splitabs {
+    gap: 40px;
+  }
+
+  .charts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .bar>h2{
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .mastfooter>h2{
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .bar{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .mastfooter{
+    display: none !important;
+  }
+}
